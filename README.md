@@ -102,6 +102,11 @@ angular.element(document).ready(function () {
 });
 ```
 
+In this case it would be neccessary for `ng-example` to list `ng-anon-module` in
+its `dependencies` rather than `devDependencies` in `package.json`, because
+this dependency must be installed for the users of the `ng-example` as well as
+its developers.
+
 If you're releasing a module to the public, it's likely that you'll want to make
 it usable both as a CommonJS module via webpack *and* via the old-fashioned practice
 of just referring directly to an opaque JS bundle that registers the module
